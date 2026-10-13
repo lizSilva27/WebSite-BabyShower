@@ -1,0 +1,46 @@
+
+# =====================================
+# BABY SHOWER - GITIGNORE
+# =====================================
+
+# CSS generado para desarrollo
+/css/main.css
+/css/main.css.map
+
+# Archivos de mapas de código
+*.css.map
+*.js.map
+
+# Dependencias de Node.js
+node_modules/
+
+# Variables de entorno
+.env
+.env.*
+!.env.example
+
+# Archivos temporales
+*.tmp
+*.temp
+*.log
+*.bak
+*.swp
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Configuración local del editor
+.vscode/
+.idea/
+
+# Archivos de caché
+.cache/
+.sass-cache/
+
+# Archivos locales de Netlify
+.netlify/
+
+# Mantener el CSS minificado
+!/css/main.min.css

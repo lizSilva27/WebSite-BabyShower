@@ -1,0 +1,110 @@
+.section-hearts {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+
+  &__heart {
+    position: absolute;
+    display: block;
+    color: var(--color-blue-pastel);
+    opacity: 0.55;
+
+    &--first {
+      top: 15%;
+      left: 5%;
+      font-size: 2.2rem;
+      transform: rotate(-18deg);
+    }
+
+    &--second {
+      right: 6%;
+      bottom: 15%;
+      font-size: 1.5rem;
+      transform: rotate(20deg);
+    }
+  }
+}
+
+// Detalles del evento
+.details {
+  .section-hearts__heart {
+    &--first {
+      top: 12%;
+      left: 4%;
+    }
+
+    &--second {
+      right: 5%;
+      bottom: 12%;
+    }
+  }
+}
+
+// Ubicación
+.location {
+  .section-hearts__heart {
+    color: #9FC7E8;
+    opacity: 0.5;
+
+    &--first {
+      top: 10%;
+      right: 8%;
+      left: auto;
+      font-size: 1.8rem;
+    }
+
+    &--second {
+      bottom: 8%;
+      left: 4%;
+      right: auto;
+      font-size: 2.5rem;
+    }
+  }
+}
+
+// Confirmación de asistencia
+.rsvp {
+  .section-hearts__heart {
+    color: var(--color-blue-pastel);
+    opacity: 0.65;
+
+    &--first {
+      top: 20%;
+      left: 12%;
+      font-size: 2.8rem;
+    }
+
+    &--second {
+      right: 11%;
+      bottom: 18%;
+      font-size: 2rem;
+    }
+  }
+}
+
+// Adaptación móvil
+@media (max-width: 575px) {
+  .section-hearts__heart {
+    &--first {
+      font-size: 1.4rem !important;
+    }
+
+    &--second {
+      font-size: 1.1rem !important;
+    }
+  }
+
+  .rsvp .section-hearts__heart {
+    &--first {
+      top: 8%;
+      left: 4%;
+    }
+
+    &--second {
+      right: 4%;
+      bottom: 5%;
+    }
+  }
+}

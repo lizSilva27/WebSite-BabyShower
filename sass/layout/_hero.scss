@@ -1,0 +1,251 @@
+@use '../abstracts/mixins' as *;
+
+.hero {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-cream);
+  overflow: hidden;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 40% 52%;
+    align-items: center;
+    min-height: 560px;
+    padding-block: 3rem;
+  }
+
+  // ILUSTRACIÓN
+  &__visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    isolation: isolate;
+    // width: 100%;
+    // min-width: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 2%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 81%;
+      height: 25px;
+      background: rgb(100 75 55);
+      border-radius: 50%;
+      filter: blur(16px);
+      z-index: -1;
+      pointer-events: none;
+    }
+  }
+
+  &__image {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    max-width: 530px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  // CONTENIDO
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+    text-align: center;
+    padding-inline: 1rem;
+  }
+
+  &__eyebrow {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--color-blue-primary);
+  }
+
+  &__title {
+    margin-bottom: 1.5rem;
+    font-family: var(--font-decorative);
+    font-size: clamp(3.5rem, 5.5vw, 5.8rem);
+    font-weight: 400;
+    line-height: 1.35;
+    color: var(--color-blue-primary);
+    white-space: nowrap;
+  }
+
+  &__nameBaby {
+    // margin-bottom: 1.5rem;
+    font-family: var(--font-decorative);
+    font-size: clamp(2.5rem, 3.5vw, 5rem);
+    font-weight: 400;
+    line-height: 1.35;
+    color: var(--color-blue-primary);
+    white-space: nowrap;
+  }
+
+  &__description {
+    max-width: 390px;
+    margin-bottom: 2rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.6;
+    color: var(--color-text);
+    text-wrap: balance;
+  }
+
+  // TARJETA DE FECHA Y HORA
+  &__information {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    max-width: 510px;
+    padding: 1.25rem;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+  }
+
+  &__information-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    min-width: 0;
+
+    &:first-child {
+      border-right: 1px solid var(--color-border);
+      padding-right: 1rem;
+    }
+
+    &:last-child {
+      padding-left: 1rem;
+    }
+  }
+
+  &__information-icon {
+    flex-shrink: 0;
+    font-size: 2.4rem;
+    line-height: 1;
+    color: var(--color-blue-primary);
+  }
+
+  &__information-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--color-text);
+
+    strong {
+      font-weight: 800;
+    }
+  }
+
+  // TABLETS
+  @include tablet {
+    &__container {
+      grid-template-columns: 45% 55%;
+      min-height: auto;
+      padding-block: 3rem;
+    }
+
+    &__title {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      white-space: normal;
+    }
+
+    &__description {
+      font-size: 1rem;
+    }
+
+    &__information {
+      padding: 1rem;
+    }
+
+    &__information-item {
+      gap: 0.5rem;
+    }
+
+    &__information-icon {
+      font-size: 1.8rem;
+    }
+
+    &__information-text {
+      font-size: 0.8rem;
+    }
+  }
+
+  // MÓVILES
+  @include mobile {
+    &__container {
+      grid-template-columns:  1fr;
+      gap: 1.5rem;
+      padding-block: 2rem 3rem;
+    }
+
+    &__visual {
+      order: 2;
+    }
+
+    &__image {
+      max-width: 340px;
+    }
+
+    &__content {
+      order: 1;
+      padding-inline: 0;
+    }
+
+    &__eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+    }
+
+    &__title {
+      margin-bottom: 1rem;
+      font-size: clamp(2.8rem, 11vw, 4rem);
+      line-height: 1.4;
+    }
+
+    &__description {
+      max-width: 330px;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    &__information {
+      max-width: 380px;
+      padding: 1rem 0.5rem;
+    }
+
+    &__information-item {
+      gap: 0.5rem;
+
+      &:first-child {
+        padding-right: 0.5rem;
+      }
+      
+      &:last-child {
+        padding-left: 0.5rem;
+      }
+    }
+
+    &__information-icon {
+      font-size: 1.5rem;
+    }
+
+    &__information-text {
+      font-size: 0.72rem;
+    }
+  }
+}

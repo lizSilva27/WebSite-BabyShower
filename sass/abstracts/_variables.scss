@@ -1,0 +1,50 @@
+//=============================================================
+// <Declaración de las variables a utilizar dentro de todo
+// el sitio web, colores, fuentes.>
+//=============================================================
+
+//==================================
+// COLORES
+//==================================
+// $Crema: #FAF8F5;
+// $Azul-Claro: #EAF4FC;
+// $Azul-Pastel: #B8D8F0;
+// $Azul-Principal: #477EAE;
+// $Beige: #E8C9A7;
+
+
+//==================================
+// FUENTE
+//==================================
+// @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Pacifico&display=swap');
+
+// $font-primary: 'Nunito', sans-serif;
+// $font-decorative: 'Pacifico', cursive;
+
+
+
+:root {
+  // Colores principales
+  --color-cream: #FAF8F5;
+  --color-white: #FFFFFF;
+  --color-blue-light: #EAF4FC;
+  --color-blue-pastel: #B8D8F0;
+  --color-blue-primary: #477EAE;
+  --color-beige: #E8C9A7;
+
+  // Textos
+  --color-text: #24476B;
+  --color-text-muted: #66788A;
+
+  // Bordes y sombras
+  --color-border: #E2EAF1;
+  --shadow-soft: 0 4px 20px rgba(36, 71, 107, 0.08);
+
+  // Tipografías
+  --font-primary: 'Nunito', sans-serif;
+  --font-decorative: 'Pacifico', cursive;
+
+  // Medidas
+  --container-width: 1200px;
+  --border-radius: 16px;
+}

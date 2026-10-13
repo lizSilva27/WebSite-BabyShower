@@ -1,0 +1,15 @@
+{
+  "name": "site_web-baby-shower",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass sass/main.scss css/main.css",
+    "sass:watch": "sass --watch SASS/main.scss:css/main.css",
+    "build-sass": "sass sass/main.scss:css/main.min.css --style compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

@@ -1,0 +1,44 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: min(100% - 2rem, var(--container-width));
+  margin-inline: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.section-title {
+  font-family: var(--font-decorative);
+  font-weight: 400;
+  color: var(--color-blue-primary);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-blue-primary);
+  outline-offset: 3px;
+}
+
+::selection {
+  background-color: var(--color-blue-pastel);
+  color: var(--color-text);
+}
